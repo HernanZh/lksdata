@@ -116,8 +116,8 @@ view: reporting_metrics {
     primary_key: yes
     type: string
     # hidden: yes
-    sql: concat(cast(${date_date} AS STRING),${site_id},cast(${ad_network_id} AS STRING),${app_id},${campaign_id},${country}) ;;
-  }
+    sql: ${date_date} || ${site_id} || ${ad_network_id} || ${app_id} || ${campaign_id} || ${country} ;;
+    }
 
   measure: distinct_dates {
     type: count_distinct

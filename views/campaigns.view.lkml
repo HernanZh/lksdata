@@ -55,6 +55,11 @@ view: campaigns {
     drill_fields: [detail*]
   }
 
+  measure: oldest_date {
+    type: date
+    sql:  MIN(${updated_date});;
+  }
+
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
